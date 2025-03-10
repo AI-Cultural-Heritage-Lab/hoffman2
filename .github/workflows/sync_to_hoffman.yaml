@@ -9,16 +9,18 @@ jobs:
   sync:
     runs-on: ubuntu-latest
     steps:
+      # Download the GitHub Repo
       - name: Checkout Repository
         uses: actions/checkout@v4
 
+      # Set up SSH in GitHub Actions
       - name: Setup SSH
         run: |
-          mkdir -p ~/.ssh
+          mmkdir -p ~/.ssh
           echo "${{ secrets.HOFFMAN2_SSH_KEY }}" > ~/.ssh/hoffman2_key
           chmod 600 ~/.ssh/hoffman2_key
           ssh-keyscan -H ${{ secrets.HOFFMAN2_HOST }} >> ~/.ssh/known_hosts
 
       - name: Sync Repository to Hoffman2
         run: |
-          rsync -avz --delete -e "ssh -i ~/.ssh/hoffman2_key" ./ ${{ secrets.HOFFMAN2_USER }}@${{ secrets.HOFFMAN2_HOST }}:/path/to/your/project/
+          rsync -avz --delete -e "ssh -i ~/.ssh/hoffman2_key -o StrictHostKeyChecking=no" ./ ${{ secrets.HOFFMAN2_USER }}@${{ secrets.HOFFMAN2_HOST }}:/u/project/tpresner/shared/
