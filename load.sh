@@ -18,3 +18,4 @@ echo "2. Referencing tpresner shared directory for Ollama models"
 module load apptainer 
 
 echo "3. apptainer module for Ollama loaded"
+
