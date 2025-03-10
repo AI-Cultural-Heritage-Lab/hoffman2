@@ -1,0 +1,24 @@
+name: Sync to Hoffman2
+
+on:
+  push:
+    branches:
+      - main  # Change this if using a different branch
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup SSH
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.HOFFMAN2_SSH_KEY }}" > ~/.ssh/hoffman2_key
+          chmod 600 ~/.ssh/hoffman2_key
+          ssh-keyscan -H ${{ secrets.HOFFMAN2_HOST }} >> ~/.ssh/known_hosts
+
+      - name: Sync Repository to Hoffman2
+        run: |
+          rsync -avz --delete -e "ssh -i ~/.ssh/hoffman2_key" ./ ${{ secrets.HOFFMAN2_USER }}@${{ secrets.HOFFMAN2_HOST }}:/path/to/your/project/
