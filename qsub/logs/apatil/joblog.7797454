@@ -1,0 +1,111 @@
+Running job on Hoffman2 with Job ID: 7797454
+Loaded Modules:
+Currently Loaded Modulefiles:
+ 1) python/3.9.6(default)   2) anaconda3/2023.03  
+
+Key:
+(symbolic-version)  
+Python 3.9.6 and Anaconda3 2023.03 modules loaded
+
+Apptainer loaded successfully!
+apptainer version 1.2.2
+INFO:    Instance stats will not be available - requires cgroups v2 with systemd as manager.
+INFO:    fuse2fs not found, will not be able to mount EXT3 filesystems
+INFO:    gocryptfs not found, will not be able to use gocryptfs
+INFO:    underlay of /etc/localtime required more than 50 (88) bind mounts
+INFO:    underlay of /usr/bin/nvidia-smi required more than 50 (379) bind mounts
+
+INFO:    instance started successfully
+Started Apptainer instance: myollama
+apatil   15936  0.0  0.0  25232  1856 ?        S    10:39   0:00 /bin/squashfuse_ll -f -o offset=40960 /proc/self/fd/3 /u/local/apps/apptainer/1.2.2/var/apptainer/mnt/session/rootfs
+apatil   15952  0.0  0.0   9100   684 ?        S    10:39   0:00 grep apptainer
+INSTANCE NAME    PID      IP    IMAGE
+myollama         15923          /u/local/apps/apptainer/H2_containers/h2-ollama.sif
+
+Conda environment activated successfully
+
+Using Python from: /u/project/tpresner/shared/mypython/bin/python
+Python 3.9.21
+
+Flask server started with PID 15979
+
+Running inside a qsub job.
+ * Serving Flask app 'server'
+ * Debug mode: off
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.16.104.248:5000
+[33mPress CTRL+C to quit[0m
+127.0.0.1 - - [03/Mar/2025 10:44:22] "POST /chat HTTP/1.1" 200 -
+127.0.0.1 - - [03/Mar/2025 10:47:43] "POST /chat HTTP/1.1" 200 -
+127.0.0.1 - - [03/Mar/2025 10:50:39] "POST /chat HTTP/1.1" 200 -
+
+Processing file: word1.txt
+Content:
+hello
+
+
+
+{'created_at': '2025-03-03T18:44:22.485708736Z', 'done': True, 'done_reason': 'stop', 'eval_count': 68, 'eval_duration': 211000000000, 'load_duration': 85295991654, 'message': {'content': 'Here are 10 random words that are synonyms for "hello":\n\n1. Greeting\n2. Hi\n3. Welcome\n4. Salutation\n5. Hey\n6. Cheers\n7. Regards\n8. Introduction\n9. Acknowledgment\n10. Salute\n\nLet me know if you\'d like more!', 'role': 'assistant'}, 'model': 'llama3.3:latest', 'prompt_eval_count': 36, 'prompt_eval_duration': 2177000000, 'total_duration': 300009742883}
+Here are 10 random words that are synonyms for "hello":
+
+1. Greeting
+2. Hi
+3. Welcome
+4. Salutation
+5. Hey
+6. Cheers
+7. Regards
+8. Introduction
+9. Acknowledgment
+10. Salute
+
+Let me know if you'd like more!
+Saved response to /u/project/tpresner/shared/qsub/practice/apatil/output/word1.txt
+
+Processing file: word2.txt
+Content:
+goodbye
+
+
+{'created_at': '2025-03-03T18:47:43.134014719Z', 'done': True, 'done_reason': 'stop', 'eval_count': 64, 'eval_duration': 197179000000, 'load_duration': 69176744, 'message': {'content': 'Here are 10 random words that are synonyms for "goodbye":\n\n1. Farewell\n2. Adieu\n3. Departure\n4. Leave\n5. Exit\n6. Parting\n7. So long\n8. Valediction\n9. Au revoir\n10. Adios', 'role': 'assistant'}, 'model': 'llama3.3:latest', 'prompt_eval_count': 37, 'prompt_eval_duration': 3359000000, 'total_duration': 200608944837}
+Here are 10 random words that are synonyms for "goodbye":
+
+1. Farewell
+2. Adieu
+3. Departure
+4. Leave
+5. Exit
+6. Parting
+7. So long
+8. Valediction
+9. Au revoir
+10. Adios
+Saved response to /u/project/tpresner/shared/qsub/practice/apatil/output/word2.txt
+
+Processing file: word3.txt
+Content:
+computer
+
+
+{'created_at': '2025-03-03T18:50:39.287734946Z', 'done': True, 'done_reason': 'stop', 'eval_count': 57, 'eval_duration': 172667000000, 'load_duration': 42242334, 'message': {'content': 'Here are 10 random synonyms for the word "computer":\n\n1. Laptop\n2. Desktop\n3. Terminal\n4. Mainframe\n5. Server\n6. Workstation\n7. PC (Personal Computer)\n8. Machine\n9. Processor\n10. System', 'role': 'assistant'}, 'model': 'llama3.3:latest', 'prompt_eval_count': 36, 'prompt_eval_duration': 3407000000, 'total_duration': 176118867499}
+Here are 10 random synonyms for the word "computer":
+
+1. Laptop
+2. Desktop
+3. Terminal
+4. Mainframe
+5. Server
+6. Workstation
+7. PC (Personal Computer)
+8. Machine
+9. Processor
+10. System
+Saved response to /u/project/tpresner/shared/qsub/practice/apatil/output/word3.txt
+Client script executed. Output saved to /u/project/tpresner/shared/qsub/practice/apatil/output
+Stopping Flask server with PID 15979
+Flask server stopped successfully.
+INFO:    Stopping myollama instance of /u/local/apps/apptainer/H2_containers/h2-ollama.sif (PID=15923)
+INFO:    Killing myollama instance of /u/local/apps/apptainer/H2_containers/h2-ollama.sif (PID=15923) (Timeout)
+myollama apptainer instance stopped.

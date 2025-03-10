@@ -1,0 +1,75 @@
+Running job on Hoffman2 with Job ID: 7845317
+Loaded Modules:
+Currently Loaded Modulefiles:
+ 1) python/3.9.6(default)   2) anaconda3/2023.03  
+
+Key:
+(symbolic-version)  
+Python 3.9.6 and Anaconda3 2023.03 modules loaded
+
+Apptainer loaded successfully!
+apptainer version 1.2.2
+INFO:    Instance stats will not be available - requires cgroups v2 with systemd as manager.
+INFO:    fuse2fs not found, will not be able to mount EXT3 filesystems
+INFO:    gocryptfs not found, will not be able to use gocryptfs
+INFO:    underlay of /etc/localtime required more than 50 (88) bind mounts
+INFO:    underlay of /usr/bin/nvidia-smi required more than 50 (379) bind mounts
+
+INFO:    instance started successfully
+Started Apptainer instance: myollama
+bpeir    14696  0.0  0.0  25312  1816 ?        R    12:32   0:00 /bin/squashfuse_ll -f -o offset=40960 /proc/self/fd/3 /u/local/apps/apptainer/1.2.2/var/apptainer/mnt/session/rootfs
+bpeir    14714  0.0  0.0   9100   684 ?        S    12:32   0:00 grep apptainer
+INSTANCE NAME    PID      IP    IMAGE
+myollama         14684          /u/local/apps/apptainer/H2_containers/h2-ollama.sif
+
+Conda environment activated successfully
+
+Using Python from: /u/project/tpresner/shared/mypython/bin/python
+Python 3.9.21
+
+Flask server started with PID 14739
+
+Running inside a qsub job.
+ * Serving Flask app 'server'
+ * Debug mode: off
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.16.104.248:5000
+[33mPress CTRL+C to quit[0m
+127.0.0.1 - - [06/Mar/2025 12:37:56] "[35m[1mPOST /chat HTTP/1.1[0m" 500 -
+127.0.0.1 - - [06/Mar/2025 13:06:25] "POST /chat HTTP/1.1" 200 -
+127.0.0.1 - - [06/Mar/2025 13:29:33] "POST /chat HTTP/1.1" 200 -
+
+Processing file: steak.txt
+Content:
+a steak
+
+
+
+Error 500: {"details":"{\"error\":\"timed out waiting for llama runner to start - progress 0.00 - \"}","error":"Failed to fetch response from Ollama"}
+
+
+Processing file: omelette.txt
+Content:
+an omelette
+
+
+{'created_at': '2025-03-06T21:06:25.559535129Z', 'done': True, 'done_reason': 'stop', 'eval_count': 80, 'eval_duration': 1486741000000, 'load_duration': 215229559939, 'message': {'content': 'I would categorize an omelette as a type of "Sandwich" (albeit a loose interpretation), but since it doesn\'t quite fit any of the other categories perfectly, and it does have fillings enclosed within, that\'s where I\'d place it. However, if I had to choose a category that isn\'t on your list, I might say "Breakfast dish"!', 'role': 'assistant'}, 'model': 'llama3.3:latest', 'prompt_eval_count': 42, 'prompt_eval_duration': 5837000000, 'total_duration': 1709006744186}
+I would categorize an omelette as a type of "Sandwich" (albeit a loose interpretation), but since it doesn't quite fit any of the other categories perfectly, and it does have fillings enclosed within, that's where I'd place it. However, if I had to choose a category that isn't on your list, I might say "Breakfast dish"!
+Saved response to /u/project/tpresner/shared/qsub/practice/bpeir/output/omelette.txt
+
+Processing file: nachos.txt
+Content:
+some nachos
+
+
+{'created_at': '2025-03-06T21:29:32.989414231Z', 'done': True, 'done_reason': 'stop', 'eval_count': 78, 'eval_duration': 1378151000000, 'load_duration': 63608566, 'message': {'content': 'I would categorize "some nachos" as a type of Sandwich, although it\'s a bit of a loose interpretation since nachos are often considered an appetizer or snack. However, they do typically consist of tortilla chips (which can be thought of as a crunchy "bread") topped with various ingredients, so I\'ll group them with sandwiches for the sake of this exercise!', 'role': 'assistant'}, 'model': 'llama3.3:latest', 'prompt_eval_count': 41, 'prompt_eval_duration': 9135000000, 'total_duration': 1387351370214}
+I would categorize "some nachos" as a type of Sandwich, although it's a bit of a loose interpretation since nachos are often considered an appetizer or snack. However, they do typically consist of tortilla chips (which can be thought of as a crunchy "bread") topped with various ingredients, so I'll group them with sandwiches for the sake of this exercise!
+Saved response to /u/project/tpresner/shared/qsub/practice/bpeir/output/nachos.txt
+Client script executed. Output saved to /u/project/tpresner/shared/qsub/practice/bpeir/output
+Stopping Flask server with PID 14739
+Flask server stopped successfully.
+INFO:    Stopping myollama instance of /u/local/apps/apptainer/H2_containers/h2-ollama.sif (PID=14684)
+INFO:    Killing myollama instance of /u/local/apps/apptainer/H2_containers/h2-ollama.sif (PID=14684) (Timeout)
+myollama apptainer instance stopped.

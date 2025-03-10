@@ -1,0 +1,41 @@
+Running job on Hoffman2 with Job ID: 7790078
+Loaded Modules:
+Currently Loaded Modulefiles:
+ 1) python/3.9.6(default)   2) anaconda3/2023.03  
+
+Key:
+(symbolic-version)  
+Python 3.9.6 and Anaconda3 2023.03 modules loaded
+
+Apptainer loaded successfully!
+apptainer version 1.2.2
+INFO:    Instance stats will not be available - requires cgroups v2 with systemd as manager.
+FATAL:   instance myollama already exists
+Started Apptainer instance: myollama
+tangai   201126  0.1  0.0  25232  1856 ?        S    03:14   0:00 /bin/squashfuse_ll -f -o offset=40960 /proc/self/fd/3 /u/local/apps/apptainer/1.2.2/var/apptainer/mnt/session/rootfs
+tangai   201693  0.0  0.0   9108   684 ?        S    03:16   0:00 grep apptainer
+INSTANCE NAME    PID       IP    IMAGE
+myollama         201113          /u/local/apps/apptainer/H2_containers/h2-ollama.sif
+
+Conda environment activated successfully
+
+Using Python from: /u/project/tpresner/shared/mypython/bin/python
+Python 3.9.21
+
+Flask server started with PID 201715
+
+ * Serving Flask app 'qsub_server'
+ * Debug mode: off
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.16.104.239:5000
+[33mPress CTRL+C to quit[0m
+127.0.0.1 - - [03/Mar/2025 03:21:58] "POST /chat HTTP/1.1" 200 -
+Nice to meet you, Nancy! It sounds like you enjoy a relaxed and healthy lifestyle. Walking your dog must be a great way to get some exercise and fresh air, and avocados are a delicious and nutritious snack. And let's be real, who doesn't love sleeping? What's your dog's name, by the way?
+Saved response to /u/project/tpresner/shared/qsub/practice/llm_tangai.txt
+Client script executed. Output saved to /u/project/tpresner/shared/qsub/practice/llm_test_tangai.txt
+Stopping Flask server with PID 201715
+Flask server stopped successfully.
+INFO:    Stopping myollama instance of /u/local/apps/apptainer/H2_containers/h2-ollama.sif (PID=201113)
+myollama apptainer instance stopped.

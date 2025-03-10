@@ -1,0 +1,69 @@
+Running job on Hoffman2 with Job ID: 7797737
+Loaded Modules:
+Currently Loaded Modulefiles:
+ 1) python/3.9.6(default)   2) anaconda3/2023.03  
+
+Key:
+(symbolic-version)  
+Python 3.9.6 and Anaconda3 2023.03 modules loaded
+
+Apptainer loaded successfully!
+apptainer version 1.2.2
+INFO:    Instance stats will not be available - requires cgroups v2 with systemd as manager.
+INFO:    fuse2fs not found, will not be able to mount EXT3 filesystems
+INFO:    gocryptfs not found, will not be able to use gocryptfs
+INFO:    underlay of /etc/localtime required more than 50 (88) bind mounts
+INFO:    underlay of /usr/bin/nvidia-smi required more than 50 (379) bind mounts
+
+INFO:    instance started successfully
+Started Apptainer instance: myollama
+awasdahl  5636  0.0  0.0  25204  1708 ?        R    10:59   0:00 /bin/squashfuse_ll -f -o offset=40960 /proc/self/fd/3 /u/local/apps/apptainer/1.2.2/var/apptainer/mnt/session/rootfs
+awasdahl  5652  0.0  0.0   9100   684 ?        S    10:59   0:00 grep apptainer
+INSTANCE NAME    PID     IP    IMAGE
+myollama         5623          /u/local/apps/apptainer/H2_containers/h2-ollama.sif
+
+Conda environment activated successfully
+
+Using Python from: /u/project/tpresner/shared/mypython/bin/python
+Python 3.9.21
+
+Flask server started with PID 5680
+
+Running inside a qsub job.
+ * Serving Flask app 'server'
+ * Debug mode: off
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.16.104.248:5000
+[33mPress CTRL+C to quit[0m
+127.0.0.1 - - [03/Mar/2025 11:01:07] "POST /chat HTTP/1.1" 200 -
+127.0.0.1 - - [03/Mar/2025 11:01:34] "POST /chat HTTP/1.1" 200 -
+
+Processing file: nanoAB.txt
+Content:
+
+
+{'created_at': '2025-03-03T19:01:07.267923373Z', 'done': True, 'done_reason': 'stop', 'eval_count': 21, 'eval_duration': 60074000000, 'load_duration': 17260279976, 'message': {'content': 'LOL\nLOL\nLOL\nLOL\nLOL\nLOL\nLOL', 'role': 'assistant'}, 'model': 'llama3.3:latest', 'prompt_eval_count': 21, 'prompt_eval_duration': 4107000000, 'total_duration': 83237299497}
+LOL
+LOL
+LOL
+LOL
+LOL
+LOL
+LOL
+Saved response to /u/project/tpresner/shared/qsub/practice/awasdahl/output/nanoAB.txt
+
+Processing file: nanoCD.txt
+Content:
+
+
+{'created_at': '2025-03-03T19:01:34.610107479Z', 'done': True, 'done_reason': 'stop', 'eval_count': 9, 'eval_duration': 24203000000, 'load_duration': 62575392, 'message': {'content': 'LOL LOL LOL LOL LOL LOL LOL', 'role': 'assistant'}, 'model': 'llama3.3:latest', 'prompt_eval_count': 21, 'prompt_eval_duration': 3052000000, 'total_duration': 27319390125}
+LOL LOL LOL LOL LOL LOL LOL
+Saved response to /u/project/tpresner/shared/qsub/practice/awasdahl/output/nanoCD.txt
+Client script executed. Output saved to /u/project/tpresner/shared/qsub/practice/awasdahl/output
+Stopping Flask server with PID 5680
+Flask server stopped successfully.
+INFO:    Stopping myollama instance of /u/local/apps/apptainer/H2_containers/h2-ollama.sif (PID=5623)
+INFO:    Killing myollama instance of /u/local/apps/apptainer/H2_containers/h2-ollama.sif (PID=5623) (Timeout)
+myollama apptainer instance stopped.

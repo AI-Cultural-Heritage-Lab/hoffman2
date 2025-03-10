@@ -1,0 +1,193 @@
+Running job on Hoffman2 with Job ID: 7790094
+Loaded Modules:
+Currently Loaded Modulefiles:
+ 1) python/3.9.6(default)   2) anaconda3/2023.03  
+
+Key:
+(symbolic-version)  
+Python 3.9.6 and Anaconda3 2023.03 modules loaded
+
+Apptainer loaded successfully!
+apptainer version 1.2.2
+INFO:    Instance stats will not be available - requires cgroups v2 with systemd as manager.
+INFO:    fuse2fs not found, will not be able to mount EXT3 filesystems
+INFO:    gocryptfs not found, will not be able to use gocryptfs
+INFO:    underlay of /etc/localtime required more than 50 (88) bind mounts
+INFO:    underlay of /usr/bin/nvidia-smi required more than 50 (379) bind mounts
+
+INFO:    instance started successfully
+Started Apptainer instance: myollama
+tangai   207435 25.0  0.0  25232  1856 ?        S    04:00   0:00 /bin/squashfuse_ll -f -o offset=40960 /proc/self/fd/3 /u/local/apps/apptainer/1.2.2/var/apptainer/mnt/session/rootfs
+tangai   207458  0.0  0.0   9100   684 ?        S    04:00   0:00 grep apptainer
+INSTANCE NAME    PID       IP    IMAGE
+myollama         207422          /u/local/apps/apptainer/H2_containers/h2-ollama.sif
+
+Conda environment activated successfully
+
+Using Python from: /u/project/tpresner/shared/mypython/bin/python
+Python 3.9.21
+
+Flask server started with PID 207492
+
+Checking environment variables in qsub job...
+
+MANPATH=/u/local/apps/apptainer/1.2.2/man:/u/local/apps/python/3.9.6/gcc-4.8.5/share/man::
+PKG_CONFIG_PATH_modshare=/u/local/apps/apptainer/1.2.2/lib/pkgconfig:1:/u/local/apps/python/3.9.6/gcc-4.8.5/lib/pkgconfig:1
+HOSTNAME=g13
+_LMFILES__modshare=/u/local/Modules/modulefiles/python/3.9.6:1:/u/local/Modules/modulefiles/anaconda3/2023.03:1:/u/local/Modules/modulefiles/apptainer/1.2.2:1
+H2_CONTAINER_LOC=/u/local/apps/apptainer/H2_containers
+MODULEPATH_modshare=/u/local/Modules/python/3.9.6/modulefiles:1:/u/local/Modules/modulefiles:1
+SGE_TASK_STEPSIZE=undefined
+LD_RUN_PATH_modshare=/u/local/apps/apptainer/1.2.2/lib:1
+MODULES_CMD=/u/local/Modules/4.7.0/gcc-4.8.5/libexec/modulecmd.tcl
+SHELL=/bin/csh
+PYTHON_INC=/u/local/apps/python/3.9.6/gcc-4.8.5/include/python3.9
+NHOSTS=1
+SGE_O_WORKDIR=/u/project/tpresner/shared/qsub/logs/tangai
+TMPDIR=/work/7790094.1.gpu_a100.q
+CONDA_SHLVL=1
+SGE_O_HOME=/u/home/t/tangai
+CONDA_PROMPT_MODIFIER=(/u/project/tpresner/shared/mypython) 
+PYTHON_DIR=/u/local/apps/python/3.9.6/gcc-4.8.5
+SGE_ARCH=lx-amd64
+SGE_CELL=hoffman2
+OLDPWD=/u/project/tpresner/shared/qsub/logs/tangai
+RESTARTED=0
+ARC=lx-amd64
+MODULES_LMSOURCESH_modshare=anaconda3/2023.03&sh /u/local/apps/anaconda3/2023.03/etc/profile.d/conda.sh|prepend-path PATH /u/local/apps/anaconda3/2023.03/condabin|set-function __conda_activate {}|set-function __conda_exe {}|set-function __conda_hashr {}|set-function __conda_reactivate {}|set-function conda {}|setenv _CE_CONDA {}|setenv _CE_M {}|setenv CONDA_EXE /u/local/apps/anaconda3/2023.03/bin/conda|setenv CONDA_PYTHON_EXE /u/local/apps/anaconda3/2023.03/bin/python|setenv CONDA_SHLVL 0:1
+USER=tangai
+LD_LIBRARY_PATH=/u/local/apps/apptainer/1.2.2/lib:/u/local/apps/python/3.9.6/gcc-4.8.5/lib
+CONDA_EXE=/u/local/apps/anaconda3/2023.03/bin/conda
+SGE_TASK_LAST=undefined
+MODULES_LMALTNAME=python/3.9.6&python/default&python
+ENV=/u/local/Modules/4.7.0/gcc-4.8.5/init/profile.sh
+QUEUE=gpu_a100.q
+CPATH=/u/local/apps/apptainer/1.2.2/include:/u/local/apps/python/3.9.6/gcc-4.8.5/include/python3.9
+_CE_CONDA=
+SGE_TASK_ID=undefined
+SGE_BINARY_PATH=/u/systems/UGE8.6.4/bin/lx-amd64
+PATH=/u/project/tpresner/shared/mypython/bin:/u/local/apps/apptainer/1.2.2/bin:/u/local/apps/anaconda3/2023.03/condabin:/u/local/apps/anaconda3/2023.03/bin:/u/local/apps/python/3.9.6/gcc-4.8.5/bin:/u/local/Modules/4.7.0/gcc-4.8.5/bin:/work/7790094.1.gpu_a100.q:/usr/local/bin:/bin:/usr/bin
+CONDA_PREFIX=/u/project/tpresner/shared/mypython
+LD_RUN_PATH=/u/local/apps/apptainer/1.2.2/lib
+SGE_STDERR_PATH=/u/project/tpresner/shared/qsub/logs/tangai/joblog.7790094
+MODULES_LMSOURCESH=anaconda3/2023.03&sh /u/local/apps/anaconda3/2023.03/etc/profile.d/conda.sh|prepend-path PATH /u/local/apps/anaconda3/2023.03/condabin|set-function __conda_activate {}|set-function __conda_exe {}|set-function __conda_hashr {}|set-function __conda_reactivate {}|set-function conda {}|setenv _CE_CONDA {}|setenv _CE_M {}|setenv CONDA_EXE /u/local/apps/anaconda3/2023.03/bin/conda|setenv CONDA_PYTHON_EXE /u/local/apps/anaconda3/2023.03/bin/python|setenv CONDA_SHLVL 0
+SGE_HGR_cuda=2
+PWD=/u/project/tpresner/shared/qsub
+CUDA_VISIBLE_DEVICES=2
+_LMFILES_=/u/local/Modules/modulefiles/python/3.9.6:/u/local/Modules/modulefiles/anaconda3/2023.03:/u/local/Modules/modulefiles/apptainer/1.2.2
+PYTHON_LIB=/u/local/apps/python/3.9.6/gcc-4.8.5/lib
+SGE_STDOUT_PATH=/u/project/tpresner/shared/qsub/logs/tangai/joblog.7790094
+SGE_ACCOUNT=sge
+SGE_EXECD_PORT=6445
+PYTHON_BIN=/u/local/apps/python/3.9.6/gcc-4.8.5/bin
+MODULEPATH=/u/local/Modules/python/3.9.6/modulefiles:/u/local/Modules/modulefiles
+SGE_RERUN_REQUESTED=2
+JOB_SCRIPT=/work/UGE/8.6.4/g13/job_scripts/7790094
+JOB_NAME=qsub_llm.sh
+SGE_QMASTER_PORT=6444
+LOADEDMODULES=python/3.9.6:anaconda3/2023.03:apptainer/1.2.2
+SGE_ROOT=/u/systems/UGE8.6.4
+SGE_HGR_h_data=10.000G
+CPATH_modshare=/u/local/apps/apptainer/1.2.2/include:1:/u/local/apps/python/3.9.6/gcc-4.8.5/include/python3.9:1
+REQNAME=qsub_llm.sh
+_CE_M=
+SGE_JOB_SPOOL_DIR=/work/UGE/8.6.4/g13/active_jobs/7790094.1
+ENVIRONMENT=BATCH
+PATH_modshare=/u/local/apps/apptainer/1.2.2/bin:1:/u/local/apps/anaconda3/2023.03/condabin:1:/bin:1:/u/local/apps/python/3.9.6/gcc-4.8.5/bin:1:/usr/bin:1:/u/local/Modules/4.7.0/gcc-4.8.5/bin:1:/work/7790094.1.gpu_a100.q:1:/u/local/apps/anaconda3/2023.03/bin:1:/usr/local/bin:1
+HOME=/u/home/t/tangai
+SHLVL=2
+SGE_CWD_PATH=/u/project/tpresner/shared/qsub/logs/tangai
+NQUEUES=1
+SGE_O_LOGNAME=tangai
+SGE_RERUN_JOB=0
+MANPATH_modshare=:1:/u/local/apps/python/3.9.6/gcc-4.8.5/share/man:1:/u/local/apps/apptainer/1.2.2/man:1
+SGE_O_MAIL=/var/spool/mail/tangai
+BASH_ENV=/u/local/Modules/4.7.0/gcc-4.8.5/init/bash
+OLLAMA_MODELS=/u/project/tpresner/shared/
+CONDA_PYTHON_EXE=/u/local/apps/anaconda3/2023.03/bin/python
+TMP=/work/7790094.1.gpu_a100.q
+JOB_ID=7790094
+LOGNAME=tangai
+LD_LIBRARY_PATH_modshare=/u/local/apps/apptainer/1.2.2/lib:1:/u/local/apps/python/3.9.6/gcc-4.8.5/lib:1
+MODULES_LMALTNAME_modshare=python/3.9.6&python/default&python:1
+MODULESHOME=/u/local/Modules/4.7.0/gcc-4.8.5
+SGE_TASK_FIRST=undefined
+CONDA_DEFAULT_ENV=/u/project/tpresner/shared/mypython
+PKG_CONFIG_PATH=/u/local/apps/apptainer/1.2.2/lib/pkgconfig:/u/local/apps/python/3.9.6/gcc-4.8.5/lib/pkgconfig
+SGE_HGR_TASK_cuda=2
+LOADEDMODULES_modshare=apptainer/1.2.2:1:python/3.9.6:1:anaconda3/2023.03:1
+INFOPATH_modshare=/u/local/apps/apptainer/1.2.2/info:1
+INFOPATH=/u/local/apps/apptainer/1.2.2/info
+CONDA_DIR=/u/local/apps/anaconda3/2023.03
+SGE_O_PATH=/u/local/compilers/intel/2020.4/compilers_and_libraries_2020.4.304/linux/bin/intel64:/u/local/compilers/intel/2020.4/compilers_and_libraries_2020.4.304/linux/bin:/u/local/compilers/intel/2020.4/compilers_and_libraries_2020.4.304/linux/mpi/intel64/libfabric/bin:/u/local/compilers/intel/2020.4/compilers_and_libraries_2020.4.304/linux/mpi/intel64/bin:/u/local/compilers/intel/2020.4/debugger_2020/gdb/intel64/bin:/u/systems/UGE8.6.4/bin/lx-amd64:/u/local/bin:/u/local/sbin:/u/local/Modules/4.7.0/gcc-4.8.5/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/u/home/t/tangai/bin
+APPTAINER_BIND=/u/scratch/t/tangai:/u/scratch/t/tangai,/u/project:/u/project
+SGE_O_HOST=login3
+SGE_O_SHELL=/bin/bash
+REQUEST=qsub_llm.sh
+NSLOTS=1
+SGE_STDIN_PATH=/dev/null
+SCRATCH=/u/scratch/t/tangai
+BASH_FUNC_module()=() {  unset _mlshdbg;
+ if [ "${MODULES_SILENT_SHELL_DEBUG:-0}" = '1' ]; then
+ case "$-" in 
+ *v*x*)
+ set +vx;
+ _mlshdbg='vx'
+ ;;
+ *v*)
+ set +v;
+ _mlshdbg='v'
+ ;;
+ *x*)
+ set +x;
+ _mlshdbg='x'
+ ;;
+ *)
+ _mlshdbg=''
+ ;;
+ esac;
+ fi;
+ unset _mlre _mlIFS;
+ if [ -n "${IFS+x}" ]; then
+ _mlIFS=$IFS;
+ fi;
+ IFS=' ';
+ for _mlv in ${MODULES_RUN_QUARANTINE:-};
+ do
+ if [ "${_mlv}" = "${_mlv##*[!A-Za-z0-9_]}" -a "${_mlv}" = "${_mlv#[0-9]}" ]; then
+ if [ -n "`eval 'echo ${'$_mlv'+x}'`" ]; then
+ _mlre="${_mlre:-}${_mlv}_modquar='`eval 'echo ${'$_mlv'}'`' ";
+ fi;
+ _mlrv="MODULES_RUNENV_${_mlv}";
+ _mlre="${_mlre:-}${_mlv}='`eval 'echo ${'$_mlrv':-}'`' ";
+ fi;
+ done;
+ if [ -n "${_mlre:-}" ]; then
+ eval `eval ${_mlre} /usr/bin/tclsh /u/local/Modules/4.7.0/gcc-4.8.5/libexec/modulecmd.tcl bash '"$@"'`;
+ else
+ eval `/usr/bin/tclsh /u/local/Modules/4.7.0/gcc-4.8.5/libexec/modulecmd.tcl bash "$@"`;
+ fi;
+ _mlstatus=$?;
+ if [ -n "${_mlIFS+x}" ]; then
+ IFS=$_mlIFS;
+ else
+ unset IFS;
+ fi;
+ unset _mlre _mlv _mlrv _mlIFS;
+ if [ -n "${_mlshdbg:-}" ]; then
+ set -$_mlshdbg;
+ fi;
+ unset _mlshdbg;
+ return $_mlstatus
+}
+BASH_FUNC_ml()=() {  module ml "$@"
+}
+_=/u/project/tpresner/shared/mypython/bin/python
+
+JOB_ID: 7790094
+ENVIRONMENT: BATCH
+Traceback (most recent call last):
+  File "/u/project/tpresner/shared/server.py", line 76, in <module>
+    if is_running_under_qsub():
+NameError: name 'is_running_under_qsub' is not defined
+Flask server failed to start. Exiting.

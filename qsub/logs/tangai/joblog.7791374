@@ -1,0 +1,51 @@
+Running job on Hoffman2 with Job ID: 7791374
+Loaded Modules:
+Currently Loaded Modulefiles:
+ 1) python/3.9.6(default)   2) anaconda3/2023.03  
+
+Key:
+(symbolic-version)  
+Python 3.9.6 and Anaconda3 2023.03 modules loaded
+
+Apptainer loaded successfully!
+apptainer version 1.2.2
+INFO:    Instance stats will not be available - requires cgroups v2 with systemd as manager.
+INFO:    fuse2fs not found, will not be able to mount EXT3 filesystems
+INFO:    gocryptfs not found, will not be able to use gocryptfs
+INFO:    underlay of /etc/localtime required more than 50 (88) bind mounts
+INFO:    underlay of /usr/bin/nvidia-smi required more than 50 (379) bind mounts
+
+INFO:    instance started successfully
+Started Apptainer instance: myollama
+tangai   220063 22.0  0.0  25328  1832 ?        S    05:35   0:00 /bin/squashfuse_ll -f -o offset=40960 /proc/self/fd/3 /u/local/apps/apptainer/1.2.2/var/apptainer/mnt/session/rootfs
+tangai   220086  0.0  0.0   9100   684 ?        S    05:35   0:00 grep apptainer
+INSTANCE NAME    PID       IP    IMAGE
+myollama         220048          /u/local/apps/apptainer/H2_containers/h2-ollama.sif
+
+Conda environment activated successfully
+
+Using Python from: /u/project/tpresner/shared/mypython/bin/python
+Python 3.9.21
+
+Flask server started with PID 220114
+
+Running inside a qsub job.
+ * Serving Flask app 'server'
+ * Debug mode: off
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.16.104.239:5000
+[33mPress CTRL+C to quit[0m
+127.0.0.1 - - [03/Mar/2025 05:35:53] "POST /chat HTTP/1.1" 200 -
+Nice to meet you, Nancy! It sounds like you enjoy a pretty relaxed pace of life, which is great. Walking your dog must be a lovely way to get some fresh air and exercise, and avocados are a delicious and healthy snack. And let's be real, who doesn't love sleeping? Do you have a favorite spot to walk your dog, or a go-to avocado recipe you like to make?
+Traceback (most recent call last):
+  File "/u/project/tpresner/shared/qsub/practice/llm_client.py", line 36, in <module>
+    with open(OUTPUT_FILE, "w") as f:
+FileNotFoundError: [Errno 2] No such file or directory: '/u/project/tpresner/shared/qsub/llm_example/llm_test_tangai.txt'
+Client script failed to execute. Check Flask server logs.
+Stopping Flask server with PID 220114
+Flask server stopped successfully.
+INFO:    Stopping myollama instance of /u/local/apps/apptainer/H2_containers/h2-ollama.sif (PID=220048)
+INFO:    Killing myollama instance of /u/local/apps/apptainer/H2_containers/h2-ollama.sif (PID=220048) (Timeout)
+myollama apptainer instance stopped.

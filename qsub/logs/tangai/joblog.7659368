@@ -1,0 +1,24 @@
+Running job on Hoffman2 with Job ID: 7659368
+Loaded Modules:
+Currently Loaded Modulefiles:
+ 1) python/3.9.6(default)   2) anaconda3/2023.03  
+
+Key:
+(symbolic-version)  
+Python 3.9.6 and Anaconda3 2023.03 modules loaded
+
+Conda environment activated successfully
+
+Using Python from: /u/project/tpresner/shared/mypython/bin/python
+Python 3.9.21
+
+Flask server started with PID 22528
+
+ * Serving Flask app 'flask_server'
+ * Debug mode: off
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[33mPress CTRL+C to quit[0m
+127.0.0.1 - - [24/Feb/2025 09:43:00] "GET /hello HTTP/1.1" 200 -
+Saved response to /u/project/tpresner/shared/qsub/practice/exercise2_tangai.txt
+Client script executed. Output saved to /u/project/tpresner/shared/qsub/practice/exercise2_tangai.txt

@@ -1,0 +1,12 @@
+Response from server: Here are 10 random synonyms for the word "computer":
+
+1. Laptop
+2. Desktop
+3. Terminal
+4. Mainframe
+5. Server
+6. Workstation
+7. PC (Personal Computer)
+8. Machine
+9. Processor
+10. System

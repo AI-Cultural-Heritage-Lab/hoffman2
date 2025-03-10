@@ -1,0 +1,71 @@
+Running job on Hoffman2 with Job ID: 7792788
+Loaded Modules:
+Currently Loaded Modulefiles:
+ 1) python/3.9.6(default)   2) anaconda3/2023.03  
+
+Key:
+(symbolic-version)  
+Python 3.9.6 and Anaconda3 2023.03 modules loaded
+
+Apptainer loaded successfully!
+apptainer version 1.2.2
+INFO:    Instance stats will not be available - requires cgroups v2 with systemd as manager.
+INFO:    fuse2fs not found, will not be able to mount EXT3 filesystems
+INFO:    gocryptfs not found, will not be able to use gocryptfs
+INFO:    underlay of /etc/localtime required more than 50 (88) bind mounts
+INFO:    underlay of /usr/bin/nvidia-smi required more than 50 (379) bind mounts
+
+INFO:    instance started successfully
+Started Apptainer instance: myollama
+tangai   228762 24.0  0.0  25116  1872 ?        R    06:38   0:00 /bin/squashfuse_ll -f -o offset=40960 /proc/self/fd/3 /u/local/apps/apptainer/1.2.2/var/apptainer/mnt/session/rootfs
+tangai   228785  0.0  0.0   9100   684 ?        S    06:38   0:00 grep apptainer
+INSTANCE NAME    PID       IP    IMAGE
+myollama         228747          /u/local/apps/apptainer/H2_containers/h2-ollama.sif
+
+Conda environment activated successfully
+
+Using Python from: /u/project/tpresner/shared/mypython/bin/python
+Python 3.9.21
+
+Flask server started with PID 228814
+
+Running inside a qsub job.
+ * Serving Flask app 'server'
+ * Debug mode: off
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.16.104.239:5000
+[33mPress CTRL+C to quit[0m
+127.0.0.1 - - [03/Mar/2025 06:38:42] "POST /chat HTTP/1.1" 200 -
+127.0.0.1 - - [03/Mar/2025 06:38:42] "POST /chat HTTP/1.1" 200 -
+127.0.0.1 - - [03/Mar/2025 06:38:42] "POST /chat HTTP/1.1" 200 -
+
+Processing file: california.txt
+Content:
+The capital of California is...
+
+
+
+Saved response to /u/project/tpresner/shared/qsub/practice/tangai/output/california.txt
+
+Processing file: texas.txt
+Content:
+The capital of Texas is...
+
+
+
+Saved response to /u/project/tpresner/shared/qsub/practice/tangai/output/texas.txt
+
+Processing file: cookies.txt
+Content:
+Santa likes to eat cookies with ...
+
+
+
+Saved response to /u/project/tpresner/shared/qsub/practice/tangai/output/cookies.txt
+Client script executed. Output saved to /u/project/tpresner/shared/qsub/practice/llm_test_tangai.txt
+Stopping Flask server with PID 228814
+Flask server stopped successfully.
+INFO:    Stopping myollama instance of /u/local/apps/apptainer/H2_containers/h2-ollama.sif (PID=228747)
+myollama apptainer instance stopped.

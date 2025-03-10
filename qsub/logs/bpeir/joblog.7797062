@@ -1,0 +1,38 @@
+Running job on Hoffman2 with Job ID: 7797062
+Loaded Modules:
+Currently Loaded Modulefiles:
+ 1) python/3.9.6(default)   2) anaconda3/2023.03  
+
+Key:
+(symbolic-version)  
+Python 3.9.6 and Anaconda3 2023.03 modules loaded
+
+Apptainer loaded successfully!
+apptainer version 1.2.2
+INFO:    Instance stats will not be available - requires cgroups v2 with systemd as manager.
+INFO:    fuse2fs not found, will not be able to mount EXT3 filesystems
+INFO:    gocryptfs not found, will not be able to use gocryptfs
+INFO:    underlay of /etc/localtime required more than 50 (88) bind mounts
+INFO:    underlay of /usr/bin/nvidia-smi required more than 50 (379) bind mounts
+
+INFO:    instance started successfully
+Started Apptainer instance: myollama
+bpeir    13883 13.0  0.0  25184  1808 ?        D    10:23   0:00 /bin/squashfuse_ll -f -o offset=40960 /proc/self/fd/3 /u/local/apps/apptainer/1.2.2/var/apptainer/mnt/session/rootfs
+bpeir    13900  0.0  0.0   9100   684 ?        S    10:23   0:00 grep apptainer
+INSTANCE NAME    PID      IP    IMAGE
+myollama         13870          /u/local/apps/apptainer/H2_containers/h2-ollama.sif
+
+Conda environment activated successfully
+
+Using Python from: /u/project/tpresner/shared/mypython/bin/python
+Python 3.9.21
+
+Flask server started with PID 13930
+
+Failed to connect to Flask server: HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /chat (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x2ad5b0d26e80>: Failed to establish a new connection: [Errno 111] Connection refused'))
+Client script executed. Output saved to /u/project/tpresner/shared/qsub/practice/llm_test_bpeir.txt
+Stopping Flask server with PID 13930
+Flask server stopped successfully.
+INFO:    Stopping myollama instance of /u/local/apps/apptainer/H2_containers/h2-ollama.sif (PID=13870)
+INFO:    Killing myollama instance of /u/local/apps/apptainer/H2_containers/h2-ollama.sif (PID=13870) (Timeout)
+myollama apptainer instance stopped.

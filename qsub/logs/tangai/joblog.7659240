@@ -1,0 +1,4 @@
+No Modulefiles Currently Loaded.
+Running job on Hoffman2 with Job ID: 7659240
+Python 3.9.6 and Anaconda3 2023.03 modules loaded
+/work/UGE/8.6.4/n7408/job_scripts/7659240: line 36: /u/home/tangai/miniconda3/etc/profile.d/conda.sh: No such file or directory

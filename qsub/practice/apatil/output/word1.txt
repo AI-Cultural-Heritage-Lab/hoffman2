@@ -1,0 +1,14 @@
+Response from server: Here are 10 random words that are synonyms for "hello":
+
+1. Greeting
+2. Hi
+3. Welcome
+4. Salutation
+5. Hey
+6. Cheers
+7. Regards
+8. Introduction
+9. Acknowledgment
+10. Salute
+
+Let me know if you'd like more!

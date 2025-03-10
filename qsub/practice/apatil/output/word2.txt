@@ -1,0 +1,12 @@
+Response from server: Here are 10 random words that are synonyms for "goodbye":
+
+1. Farewell
+2. Adieu
+3. Departure
+4. Leave
+5. Exit
+6. Parting
+7. So long
+8. Valediction
+9. Au revoir
+10. Adios

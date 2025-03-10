@@ -1,0 +1,19 @@
+Running job on Hoffman2 with Job ID: 7659130
+/work/UGE/8.6.4/n7444/job_scripts/7659130: line 23: module: command not found
+/work/UGE/8.6.4/n7444/job_scripts/7659130: line 26: module: command not found
+Python 3.9.6 and Anaconda3 2023.03 modules loaded
+/work/UGE/8.6.4/n7444/job_scripts/7659130: line 32: /u/home/tangai/miniconda3/etc/profile.d/conda.sh: No such file or directory
+/work/UGE/8.6.4/n7444/job_scripts/7659130: line 33: conda: command not found
+Conda environment activated successfully
+Using Python from: /bin/python
+Python 2.7.5
+Flask server started with PID 132462
+Traceback (most recent call last):
+  File "flask_server.py", line 1, in <module>
+    from flask import Flask
+ImportError: No module named flask
+Traceback (most recent call last):
+  File "flask_client.py", line 1, in <module>
+    import requests
+ImportError: No module named requests
+Client script failed to execute.

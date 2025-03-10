@@ -1,0 +1,44 @@
+Running job on Hoffman2 with Job ID: 7790107
+Loaded Modules:
+Currently Loaded Modulefiles:
+ 1) python/3.9.6(default)   2) anaconda3/2023.03  
+
+Key:
+(symbolic-version)  
+Python 3.9.6 and Anaconda3 2023.03 modules loaded
+
+Apptainer loaded successfully!
+apptainer version 1.2.2
+INFO:    Instance stats will not be available - requires cgroups v2 with systemd as manager.
+FATAL:   instance myollama already exists
+Started Apptainer instance: myollama
+zwang    20002  0.0  0.0  24952  1716 pts/0    S+   01:56   0:02 /bin/squashfuse_ll -f -o offset=40960 /proc/self/fd/3 /u/local/apps/apptainer/1.2.2/var/apptainer/mnt/session/rootfs
+tangai   20055  0.3  0.0  25196  1928 ?        S    04:20   0:00 /bin/squashfuse_ll -f -o offset=40960 /proc/self/fd/3 /u/local/apps/apptainer/1.2.2/var/apptainer/mnt/session/rootfs
+tangai   21116  0.0  0.0   9100   684 ?        S    04:24   0:00 grep apptainer
+INSTANCE NAME    PID      IP    IMAGE
+myollama         20042          /u/local/apps/apptainer/H2_containers/h2-ollama.sif
+
+Conda environment activated successfully
+
+Using Python from: /u/project/tpresner/shared/mypython/bin/python
+Python 3.9.21
+
+Flask server started with PID 21136
+
+Running inside a qsub job.
+ * Serving Flask app 'server'
+ * Debug mode: off
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.16.104.247:5000
+[33mPress CTRL+C to quit[0m
+127.0.0.1 - - [03/Mar/2025 04:29:23] "[35m[1mPOST /chat HTTP/1.1[0m" 500 -
+Error 500: {"details":"{\"error\":\"timed out waiting for llama runner to start - progress 0.00 - \"}","error":"Failed to fetch response from Ollama"}
+
+Client script executed. Output saved to /u/project/tpresner/shared/qsub/llm_example/llm_test_tangai.txt
+Stopping Flask server with PID 21136
+Flask server stopped successfully.
+INFO:    Stopping myollama instance of /u/local/apps/apptainer/H2_containers/h2-ollama.sif (PID=20042)
+INFO:    Killing myollama instance of /u/local/apps/apptainer/H2_containers/h2-ollama.sif (PID=20042) (Timeout)
+myollama apptainer instance stopped.
