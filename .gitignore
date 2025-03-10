@@ -1,3 +1,6 @@
 archive/
 blobs/
 mypython/
+webui/
+.ssh/
+.git
