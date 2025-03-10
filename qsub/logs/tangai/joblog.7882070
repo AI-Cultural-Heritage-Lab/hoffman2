@@ -37,3 +37,39 @@ Running inside a qsub job.
  * Running on http://127.0.0.1:5000
  * Running on http://172.16.104.239:5000
 [33mPress CTRL+C to quit[0m
+127.0.0.1 - - [10/Mar/2025 04:19:49] "POST /chat HTTP/1.1" 200 -
+127.0.0.1 - - [10/Mar/2025 04:19:50] "POST /chat HTTP/1.1" 200 -
+127.0.0.1 - - [10/Mar/2025 04:19:52] "POST /chat HTTP/1.1" 200 -
+
+Processing file: california.txt
+Content:
+The capital of California is...
+
+
+{'created_at': '2025-03-10T11:19:49.814921214Z', 'done': True, 'done_reason': 'stop', 'eval_count': 8, 'eval_duration': 687000000, 'load_duration': 200621044445, 'message': {'content': 'The capital of California is Sacramento.', 'role': 'assistant'}, 'model': 'llama3.3:latest', 'prompt_eval_count': 36, 'prompt_eval_duration': 608000000, 'total_duration': 202553277943}
+The capital of California is Sacramento.
+Saved response to /u/project/tpresner/shared/qsub/practice/tangai/output/california.txt
+
+Processing file: texas.txt
+Content:
+The capital of Texas is...
+
+
+{'created_at': '2025-03-10T11:19:50.903141228Z', 'done': True, 'done_reason': 'stop', 'eval_count': 8, 'eval_duration': 727000000, 'load_duration': 38183481, 'message': {'content': 'The capital of Texas is Austin.', 'role': 'assistant'}, 'model': 'llama3.3:latest', 'prompt_eval_count': 36, 'prompt_eval_duration': 300000000, 'total_duration': 1067249898}
+The capital of Texas is Austin.
+Saved response to /u/project/tpresner/shared/qsub/practice/tangai/output/texas.txt
+
+Processing file: cookies.txt
+Content:
+Santa likes to eat cookies with ...
+
+
+{'created_at': '2025-03-10T11:19:52.702216213Z', 'done': True, 'done_reason': 'stop', 'eval_count': 18, 'eval_duration': 1618000000, 'load_duration': 32901551, 'message': {'content': '... a cold glass of milk after a long night of delivering presents around the world.', 'role': 'assistant'}, 'model': 'llama3.3:latest', 'prompt_eval_count': 37, 'prompt_eval_duration': 134000000, 'total_duration': 1787121359}
+... a cold glass of milk after a long night of delivering presents around the world.
+Saved response to /u/project/tpresner/shared/qsub/practice/tangai/output/cookies.txt
+Client script executed. Output saved to /u/project/tpresner/shared/qsub/practice/llm_test_tangai.txt
+Stopping Flask server with PID 49690
+Flask server stopped successfully.
+INFO:    Stopping myollama instance of /u/local/apps/apptainer/H2_containers/h2-ollama.sif (PID=49623)
+INFO:    Killing myollama instance of /u/local/apps/apptainer/H2_containers/h2-ollama.sif (PID=49623) (Timeout)
+myollama apptainer instance stopped.
