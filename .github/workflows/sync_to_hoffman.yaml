@@ -16,7 +16,7 @@ jobs:
       # Set up SSH in GitHub Actions
       - name: Setup SSH
         run: |
-          mmkdir -p ~/.ssh
+          mkdir -p ~/.ssh
           echo "${{ secrets.HOFFMAN2_SSH_KEY }}" > ~/.ssh/hoffman2_key
           chmod 600 ~/.ssh/hoffman2_key
           ssh-keyscan -H ${{ secrets.HOFFMAN2_HOST }} >> ~/.ssh/known_hosts
