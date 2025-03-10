@@ -21,10 +21,10 @@ jobs:
           chmod 600 ~/.ssh/hoffman2_key
           ssh-keyscan -H ${{ secrets.HOFFMAN2_HOST }} >> ~/.ssh/known_hosts
   
-      - name: Test SSH Connection
-        run: ssh -i ~/.ssh/hoffman2_key -o StrictHostKeyChecking=no ${{ secrets.HOFFMAN2_USER }}@${{ secrets.HOFFMAN2_HOST }} "echo 'SSH Connected Successfully'"
-
-      - name: Sync Repository to Hoffman2 (Respect .gitignore)
+      - name: Pull Latest Changes on Hoffman2
         run: |
-          rsync -avz --checksum --no-t --no-p --progress --itemize-changes --filter=':- .gitignore' -e "ssh -i ~/.ssh/hoffman2_key -o StrictHostKeyChecking=no" ./ ${{ secrets.HOFFMAN2_USER }}@${{ secrets.HOFFMAN2_HOST }}:/u/project/tpresner/shared/
+          ssh -i ~/.ssh/hoffman2_key -o StrictHostKeyChecking=no ${{ secrets.HOFFMAN2_USER }}@${{ secrets.HOFFMAN2_HOST }} "cd /u/project/tpresner/shared/ && git pull origin main"
+
+
+      
 
