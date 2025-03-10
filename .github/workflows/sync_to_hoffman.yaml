@@ -26,5 +26,5 @@ jobs:
 
       - name: Sync Repository to Hoffman2 (Respect .gitignore)
         run: |
-          rsync -avz --delete --filter=':- .gitignore' --dry-run -e "ssh -i ~/.ssh/hoffman2_key -o StrictHostKeyChecking=no" ./ ${{ secrets.HOFFMAN2_USER }}@${{ secrets.HOFFMAN2_HOST }}:/u/project/tpresner/shared/
+          rsync -avz --delete --dry-run --progress --itemize-changes --filter=':- .gitignore' -e "ssh -i ~/.ssh/hoffman2_key -o StrictHostKeyChecking=no" ./ ${{ secrets.HOFFMAN2_USER }}@${{ secrets.HOFFMAN2_HOST }}:/u/project/tpresner/shared/
 
