@@ -1,0 +1,30 @@
+name: Sync to Hoffman2
+
+on:
+  push:
+    branches:
+      - main  # Change this if using a different branch
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      # Download the GitHub Repo
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      # Set up SSH in GitHub Actions
+      - name: Setup SSH
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.HOFFMAN2_SSH_KEY }}" | tr -d '\r' > ~/.ssh/hoffman2_key
+          chmod 600 ~/.ssh/hoffman2_key
+          ssh-keyscan -H ${{ secrets.HOFFMAN2_HOST }} >> ~/.ssh/known_hosts
+  
+      - name: Test SSH Connection
+        run: ssh -i ~/.ssh/hoffman2_key -o StrictHostKeyChecking=no ${{ secrets.HOFFMAN2_USER }}@${{ secrets.HOFFMAN2_HOST }} "echo 'SSH Connected Successfully'"
+
+      - name: Sync Repository to Hoffman2 (Respect .gitignore)
+        run: |
+          rsync -avz --delete --dry-run --progress --itemize-changes --filter=':- .gitignore' -e "ssh -i ~/.ssh/hoffman2_key -o StrictHostKeyChecking=no" ./ ${{ secrets.HOFFMAN2_USER }}@${{ secrets.HOFFMAN2_HOST }}:/u/project/tpresner/shared/
+
