@@ -3,4 +3,5 @@ blobs/
 mypython/
 webui/
 .ssh/
-.git
+.git/
+.github/
